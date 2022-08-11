@@ -1,0 +1,28 @@
+
+
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1>Bienvenidos a Blog de la comunidad</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+    <section>
+        {% for elemento in blog %}
+            <article>
+                <h3><a href="{% url 'detalle' %}"> {{ elemento.nombre }}</a></h3>
+                <p>
+                    {{ elemento.contenido }}
+                </p>
+                <img src="{{ elemento.imagen }}">
+                <br>
+                Autor: {{ elemento.autor }}
+                
+            </article>
+        {% endfor %}
+    </section>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1>Bienvenidos a Blog de la comunidad</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+
+<div class="col-md-13 well">
+    <div class="destacados">
+        <div class="container">
+            <div class="card">
+                <img src="{% static 'AppBlog/img/adrian.jpg' %}" />
+                <h4>Luis Adrian Chuquichanca Cañari</h4>
+                <p>Soy estudiante de la carrera de ingenieria de sistemas apasionado por la programación, tengo 23 años y vivo en Perú
+                </p>
+            </div>
+            <div class="card">
+                <img src="{% static 'AppBlog/img/luis.jpg' %}" />
+                <h4>Adrian Gomez Sanchez Bendezu</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ea numquam blanditiis deleniti accusantium nesciunt qui natus?
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+    <br><br>
+    <br><br>
+    <div class="historias">
+
+        <div class="marco">
+            <h1>Nuestro sitio webs</h1>
+            <p>
+                Nuestro sitio esta dedicado a aportar conocimiento sobre los avances de las consolas y dar información veridica acerca de las ventajas y desventajas, ya sea por las
+                mejoras o actualizaciones que surgan, nuestro grupo esta capacitado para analizar a detalle cada dato e información brindadas por las empresas, ademas de poner a prueba 
+                al limite las consolas y todas sus funcionalidades.
+            </p>
+        </div>
+    </div>
+
+    {% endblock %}

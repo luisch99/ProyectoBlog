@@ -1,0 +1,26 @@
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+{% block titulo %}
+<h1 style="text-align: center; margin-top: 75px; margin-bottom: 50px;">Login</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+        <h1 >{{ mensaje }}</h1>
+        <form style="text-align: center; margin-top: 35px; margin-bottom: 100px" 
+        action="{% url 'login' %}" method="POST">{% csrf_token%}
+                {{ form.as_p }}
+                <br>
+            <button style=" border: black solid 2px ; border-radius: 10px;" type="submit">Iniciar Sesión</button>
+            <br>
+            <button style="align-items: center; margin-top: 10px; border: black solid 2px ; border-radius: 10px;" > 
+                <a style="text-decoration: none; color: black;" href="{% url 'register' %}">
+                    Crear nueva cuenta
+                </a> 
+            </button>
+        </form>
+    
+{% endblock %}
+
+ 

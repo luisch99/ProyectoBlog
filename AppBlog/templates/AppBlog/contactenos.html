@@ -1,0 +1,78 @@
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1>Bienvenidos a Blog de la comunidad</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<h1 class="contact">CONTÁCTENOS</h1>
+<h2 class="duda">
+    ¿Tienes alguna duda o sugerencia?
+</h2>
+<p class="parrafo">
+    Complete el siguiente formulario con los datos que se soliciten y nos pondremos en contacto con usted lo más pronto posible.
+</p>
+<main class="contacto">
+    
+   <section>
+       <div>
+           <form class="form" action="contacto.html">
+                <h3>Datos Personales </h3>
+                <br>
+               <label for="name">Nombres: </label>
+               <input type="text" id="name" placeholder="Ingrese sus nombres" >
+               <br><br>
+               <label for="ape">Apellidos: </label>
+               <input type="text" id="ape" placeholder="Ingrese sus apellidos">
+               <br><br>
+               <label for="correo">Email:</label>
+               <input type="email" id="correo" placeholder="ejemplo@gmail.com">
+               <br><br>
+               <label for="pais">País:</label>
+                   <select name="pais" id="Pais">
+                       <option value="s">Selecciona</option>
+                       <option value="P">Perú</option>
+                       <option value="A">Argentina</option>
+                       <option value="E">Ecuador</option>
+                       <option value="B">Bolivia</option>
+                       <option value="C">Colombia</option>
+                       <option value="Ch">Chile</option>
+                       <option value="Pa">Paraguay</option>
+                       <option value="U">Uruguay</option>
+                   </select>
+               </label>
+               <br><br>
+               <label for="telefono">Numero de telefono</label>
+               <input type="tel"  id="telefono" placeholder="960224169">
+       </div>
+       <br>
+       <fieldset class="consulta">
+           <legend> ¿Cual es el motivo de consulta?  </legend> 
+
+               <label for="op1">Proximos eventos</label>
+               <input type="radio" id="op1" value="eventos" name="envio" >
+               <br><br>
+               <label for="op2">Informacion de tiendas</label>
+               <input type="radio" id="op2" value="tiendas" name="envio" >
+               <br><br>
+               <label for="op3">Error de información</label>
+               <input type="radio" id="op3" value="errorInfo" name="envio" >
+               <br><br>
+               <label for="op4">Otro motivo</label>
+               <input type="radio" id="op4" value="difMot" name="envio" >
+               <br><br>
+               <label for="comentario">Deje su mensaje:</label>
+               <br><br>
+               <textarea name="|" class="cons" placeholder="Escribe aquí tu duda o sugerencia o queja."></textarea>
+               <br><br>
+               <input class="boton" type="reset" value="Cancelar">
+               <input class="boton" type="submit" value="Enviar">
+       </fieldset> 
+   </section>
+   </form>
+   </main>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 style="text-align: center" class="mt-5">Bienvenidos a Blog de la comunidad</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+   <h2> you are lost</h2>
+   <p> here are some helpful links</p>
+
+   <ul>
+    <li>
+        <a href="{% url 'inicio' %}">go back home</a>
+    </li>
+   </ul>
+{% endblock %}
